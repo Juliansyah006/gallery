@@ -13,8 +13,7 @@ $foto = new c_foto();
 
 <body>
   <?php foreach ($baru->edit($_GET['albumid']) as $read) : ?>
-    <div class="card">
-      <div class="container">
+      <div class="continer">
         <h4>Album : <?= $read->namaalbum ?></h4>
         <p><?= $read->deskripsi ?></p>
         <a class="btn btn-outline-secondary btn-md" href="tambahfoto.php?albumid=<?php echo $_GET['albumid']; ?>">Tambah Foto</a>
@@ -74,5 +73,4 @@ $foto = new c_foto();
           <?php } ?>
           </div>
       </div>
-    </div>
 </body>

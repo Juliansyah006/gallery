@@ -3,6 +3,7 @@
 $title = "Dashboard";
 $side = "dashboard";
 include_once "template/header.php";
+include_once "template/sidebar.php";
 include_once "../controllers/c_foto.php";
 include_once "../controllers/c_komentar.php";
 include_once "../controllers/c_like.php";
@@ -40,7 +41,7 @@ $waktu = date("Y-m-d H:i:s");
                         <?php } ?>
                     </div>
                     <div class="col-2">
-                        <?= $tampilike->jumlah($tampil->fotoid) ?> Like | <?= $komentar->jumlah($tampil->fotoid) ?> Comments
+                        <?= $tampilike->jumlah($tampil->fotoid) ?> Like <?= $komentar->jumlah($tampil->fotoid) ?> Comments
                     </div>
                 </div>
 
@@ -53,7 +54,7 @@ $waktu = date("Y-m-d H:i:s");
                             <a class="nav-link nav-profile align-items-center pe-0" data-bs-toggle="dropdown">
                                 <span class="username text-dark" style="margin-left: 2%;"><?= $komen->username ?></span>
                                 <?php if ($_SESSION['userid'] == $komen->userid) { ?>
-                                    <a href="../routers/r_komentar.php?komentarid=<?= $komen->komentarid ?>&aksi=delete" style="margin-left: 90%;" class="text-dark" onclick="return confirm('Yakin ingin menghapus komentar anda?')">Hapus</a>
+                                    <a href="../routers/r_komentar.php?komentarid=<?= $komen->komentarid ?>&aksi=delete" style="margin-left: 94%;" class="text-dark" onclick="return confirm('Yakin ingin menghapus komentar anda?')">Hapus</a>
                                 <?php } ?>
                                 <br>
                                 <span class="p text-dark" style="margin-left: 2%;"><?= $komen->isikomentar ?></span>

@@ -50,7 +50,7 @@ $tanggal = date("Y-m-d H:i:s");
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Deskripsi</label>
+                                        <label>Deskripsi Foto</label>
                                         <textarea class="form-control p_input" id="deskripsi" rows="4" name="deskripsifoto" required><?= $edit->deskripsifoto ?></textarea>
                                     </div>
 
