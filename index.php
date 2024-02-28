@@ -35,11 +35,11 @@ include_once "views/validasi_login.php";
                   <div class="form-group">
                   <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control p_input" id="email" placeholder="Email" name="email">
+                    <input type="email" class="form-control p_input" id="email" placeholder="Email" name="email" required>
                   </div>
                   <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control p_input" id="password" placeholder="Password" name="password">
+                    <input type="password" class="form-control p_input" id="password" placeholder="Password" name="password" required>
                   </div>
                     <button type="submit" class="btn btn-primary btn-block enter-btn" name="login">SIGN IN</button>  
                   </div>

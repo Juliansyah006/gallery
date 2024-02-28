@@ -39,5 +39,5 @@ if ($_GET["aksi"] == "tambah") {
     $albumid = $_GET['albumid'];
 
     $foto->delete($fotoid);
-    header("Location: ../views/foto.php?albumid=$albumid");
+    header("location: ../views/foto.php?albumid=$albumid");
 }

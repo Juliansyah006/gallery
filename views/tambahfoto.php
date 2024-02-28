@@ -41,12 +41,12 @@ $tanggal = date("Y-m-d H:i:s");
 
                 <div class="form-group">
                     <label>Judul Foto</label>
-                    <input type="text" class="form-control p_input" id="judulfoto" name="judulfoto">
+                    <input type="text" class="form-control p_input" id="judulfoto" name="judulfoto" required>
                 </div>
 
                 <div class="form-group">
                     <label>Deskripsi Foto</label>
-                    <textarea class="form-control p_input" id="deskripsifoto" rows="4" name="deskripsifoto"></textarea>
+                    <textarea class="form-control p_input" id="deskripsifoto" rows="4" name="deskripsifoto" required></textarea>
                 </div>
 
                 <div class="form-group">
@@ -54,7 +54,7 @@ $tanggal = date("Y-m-d H:i:s");
                 </div>
 
                 <div class="form-group">
-                    <input type="file" class="form-control" name="lokasifile" id="lokasifile" aria-describedby="textHelp">
+                    <input type="file" class="form-control" name="lokasifile" id="lokasifile" aria-describedby="textHelp" required>
                 </div>
 
                 <div class="form-group">

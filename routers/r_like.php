@@ -12,11 +12,11 @@ if ($_GET['aksi'] == 'tambah') {
 
     $like->like($likeid, $fotoid, $userid, $tanggallike);
 
-    header("Location: ../views/gallery.php");
+    header("location: ../views/gallery.php");
 
 }elseif ($_GET['aksi'] == 'delete') {
     $userid = $_GET['userid'];
     
     $like->delete_like($userid);
-    header("Location: ../views/gallery.php");
+    header("location: ../views/gallery.php");
 }

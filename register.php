@@ -31,27 +31,27 @@
                     <input type="email" class="form-control p_input" id="userid" name="userid" hidden>
                   </div>
                     <label>Username</label>
-                    <input type="text" class="form-control p_input" id="username" placeholder="Username" name="username">
+                    <input type="text" class="form-control p_input" id="username" placeholder="Username" name="username" required>
                   </div>
                   <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control p_input" id="password" placeholder="Password" name="password">
+                    <input type="password" class="form-control p_input" id="password" placeholder="Password" name="password" required>
                   </div>
                   <div class="form-group">
                     <label>Email</label>
-                    <input type="email" class="form-control p_input" id="email" placeholder="Email" name="email">
+                    <input type="email" class="form-control p_input" id="email" placeholder="Email" name="email" required>
                   </div>
                   <div class="form-group">
                     <label>Full Name</label>
-                    <input type="text" class="form-control p_input" id="namalengkap" placeholder= "Fullname" name="namalengkap"> 
+                    <input type="text" class="form-control p_input" id="namalengkap" placeholder= "Fullname" name="namalengkap" required> 
                   </div>
                   <div class="form-group">
                     <label>Addres</label>
-                    <input type="text" class="form-control p_input" id="alamat" placeholder="Address" name="alamat">
+                    <input type="text" class="form-control p_input" id="alamat" placeholder="Address" name="alamat" required>
                   </div>
                   <div class="form-group">
                     <label>Gender</label>
-                    <select class="form-control p_input" name="jeniskelamin">
+                    <select class="form-control p_input" name="jeniskelamin" required>
                         <option>Male</option>
                         <option>Female</option>
                     </select>

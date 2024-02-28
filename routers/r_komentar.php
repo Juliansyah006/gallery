@@ -11,11 +11,11 @@ if ($_GET['aksi'] == 'tambah') {
     $tanggal = $_POST['tanggal'];
 
     $komen->insert_komentar($komentarid, $fotoid, $userid, $isikomentar, $tanggal);
-    header("Location:../views/gallery.php");
+    header("location:../views/gallery.php");
 
 } elseif ($_GET['aksi'] == 'delete') {
     $komentarid = $_GET['komentarid'];
 
     $komen->delete($komentarid);
-    header("Location: ../views/gallery.php");
+    header("location: ../views/gallery.php");
 }

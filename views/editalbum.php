@@ -56,10 +56,6 @@ $tanggal = date("Y-m-d H:i:s");
                     <input type="datetime-local" class="form-control p_input" id="tanggaldibuat" name="tanggaldibuat" value="<?= $tanggal ?>" hidden>
                   </div>
 
-                  <!-- <div class="form-group">
-                    <input type="file" class="form-control" value="" name="photo" id="photo" placeholder="Photo" required>
-                  </div> -->
-
                   <div class="form-group">
                     <input type="text" class="form-control form-control-user"  id="userid" value="<?= $_SESSION['userid'] ?>" name="userid" hidden>
                   </div>

@@ -18,7 +18,9 @@ $waktu = date("Y-m-d H:i:s");
 ?>
 
 <main id="main" class="main">
-
+<?php if (empty($foto->home())) {
+      echo '<h1 class="text-center">Tidak Ada Postingan Apapun';
+    } else {  ?>
     <?php foreach ($foto->home() as $tampil) : ?>
         <div class="card">
             <div class="container">
@@ -84,8 +86,4 @@ $waktu = date("Y-m-d H:i:s");
 </main><!-- End #main -->
 
 
-<?php
-
-include_once "template/footer.php";
-
-?>
+<?php }?>

@@ -96,14 +96,14 @@ include_once "../controllers/c_foto.php";
                   <h6 class="p-3 mb-0">Profile</h6>
                   <div class="dropdown-divider"></div>
                   <div class="dropdown-divider"></div>
-                  <a class="dropdown-item preview-item" href="../routers/r_login.php?aksi=logout">
+                  <a class="dropdown-item preview-item" method="POST" href="../routers/r_login.php?aksi=logout" onclick="return confirm('Yakin ingin keluar dari aplikasi ini?')">
                     <div class="preview-thumbnail">
                       <div class="preview-icon bg-dark rounded-circle">
                         <i class="mdi mdi-logout text-danger"></i>
                       </div>
                     </div>
                     <div class="preview-item-content">
-                      <p class="" onclick="return confirm('Yakin ingin keluar dari aplikasi ini?')">Log out</p>
+                      <p class="preview-item-content">Log out</p>
                     </div>
                   </a>
               </li>

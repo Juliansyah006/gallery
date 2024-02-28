@@ -10,18 +10,14 @@ class c_album {
     }
     public function read(){
         $conn = new c_koneksi();
-        //perintah mengambil semua data dari barang dan mengurutkan sesuai data terbaru diatas
         $query = "SELECT * FROM album ORDER BY albumid DESC";
         $data = mysqli_query($conn->conn(), $query);
 
-        //mengubah query data menjadi objek
         while ($row = mysqli_fetch_object($data)) {
-            // array kosong untuk menampung data objek
             $rows[] = $row;
 
         }
 
-         //mengembalikan nilai
     if (!empty($rows)) {
         return $rows;
     }
@@ -45,11 +41,10 @@ class c_album {
     public function delete($id){
         $conn = new c_koneksi();
 
-        // perintah untuk menghapus data dari barang berdasarkan id
         $query = "DELETE FROM album WHERE albumid = $id";
         $data = mysqli_query($conn->conn(), $query);
 
-        header("Location: ../views/v_album.php");
+        header("location: ../views/v_album.php");
     }
 
     public function costum($userid) {
