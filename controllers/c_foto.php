@@ -12,7 +12,7 @@ class c_foto
     public function read($albumid)
     {
         $conn = new c_koneksi();
-        //perintah mengambil semua data dari barang dan mengurutkan sesuai data terbaru diatas
+        //perintah mengambil semua data dari foto dan mengurutkan sesuai data terbaru diatas
         $query = "SELECT * FROM foto WHERE albumid='$albumid' ORDER BY fotoid DESC";
         $data = mysqli_query($conn->conn(), $query);
 
@@ -30,17 +30,13 @@ class c_foto
     public function read1($fotoid)
     {
         $conn = new c_koneksi();
-        //perintah mengambil semua data dari barang dan mengurutkan sesuai data terbaru diatas
         $query = "SELECT * FROM foto WHERE fotoid='$fotoid'";
         $data = mysqli_query($conn->conn(), $query);
 
-        //mengubah query data menjadi objek
         while ($row = mysqli_fetch_object($data)) {
-            // array kosong untuk menampung data objek
             $rows[] = $row;
         }
 
-        //mengembalikan nilai
         if (!empty($rows)) {
             return $rows;
         }
@@ -48,17 +44,13 @@ class c_foto
     public function home()
     {
         $conn = new c_koneksi();
-        //perintah mengambil semua data dari barang dan mengurutkan sesuai data terbaru diatas
         $query = "SELECT foto.*, user.* FROM foto INNER JOIN user ON foto.userid = user.userid";
         $data = mysqli_query($conn->conn(), $query);
 
-        //mengubah query data menjadi objek
         while ($row = mysqli_fetch_object($data)) {
-            // array kosong untuk menampung data objek
             $rows[] = $row;
         }
 
-        //mengembalikan nilai
         if (!empty($rows)) {
             return $rows;
         }

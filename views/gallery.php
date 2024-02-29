@@ -24,7 +24,6 @@ $waktu = date("Y-m-d H:i:s");
     <?php foreach ($foto->home() as $tampil) : ?>
         <div class="card">
             <div class="container">
-
             </div>
             <div class="card-body mt-2">
                 <h4 style="margin-left: 2%; margin-bottom: 1%;"><?= $tampil->username ?></h4>
@@ -51,20 +50,23 @@ $waktu = date("Y-m-d H:i:s");
                 if (empty($komentar->read_komentar($tampil->fotoid))) {
                     echo "";
                 } else { ?>
+
                     <?php foreach ($komentar->read_komentar($tampil->fotoid) as $komen) : ?>
                         <div class="alert alert-dark alert-dismissible fade show " col-lg-12 role="alert">
                             <a class="nav-link nav-profile align-items-center pe-0" data-bs-toggle="dropdown">
                                 <span class="username text-dark" style="margin-left: 2%;"><?= $komen->username ?></span>
+
                                 <?php if ($_SESSION['userid'] == $komen->userid) { ?>
                                     <a href="../routers/r_komentar.php?komentarid=<?= $komen->komentarid ?>&aksi=delete" style="margin-left: 94%;" class="text-dark" onclick="return confirm('Yakin ingin menghapus komentar anda?')">Hapus</a>
                                 <?php } ?>
+
                                 <br>
                                 <span class="p text-dark" style="margin-left: 2%;"><?= $komen->isikomentar ?></span>
                                 <span style="margin-left: 68%;" class="text-dark">
                                     <?= $komen->tanggalkomentar ?>
                                 </span>
-                                <!-- <span style="margin-left: 5%;"></span> -->
-                                <!-- <br> -->
+                                <span style="margin-left: 5%;"></span>
+                                </br>
 
 
                             </a>
