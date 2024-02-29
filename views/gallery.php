@@ -57,12 +57,12 @@ $waktu = date("Y-m-d H:i:s");
                                 <span class="username text-dark" style="margin-left: 2%;"><?= $komen->username ?></span>
 
                                 <?php if ($_SESSION['userid'] == $komen->userid) { ?>
-                                    <a href="../routers/r_komentar.php?komentarid=<?= $komen->komentarid ?>&aksi=delete" style="margin-left: 94%;" class="text-dark" onclick="return confirm('Yakin ingin menghapus komentar anda?')">Hapus</a>
+                                    <a href="../routers/r_komentar.php?komentarid=<?= $komen->komentarid ?>&aksi=delete" style="margin-left: 100%;" class="mdi mdi-delete" onclick="return confirm('Yakin ingin menghapus komentar anda?')"></a>
                                 <?php } ?>
 
                                 <br>
                                 <span class="p text-dark" style="margin-left: 2%;"><?= $komen->isikomentar ?></span>
-                                <span style="margin-left: 68%;" class="text-dark">
+                                <span style="margin-left: 70%;" class="text-dark">
                                     <?= $komen->tanggalkomentar ?>
                                 </span>
                                 <span style="margin-left: 5%;"></span>
